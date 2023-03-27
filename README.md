@@ -9,6 +9,6 @@ a Go API that uses ory kratos for authentication
 - run the following command
 
 ```
- podman run --mount type=bind,src=<absolute-path-to-project>/kratos-test,target=<absolute-path-to-project>/kratos-test localhost/oryd/kratos:
+ podman run -p 4433:4433 -p 4434:4434 --name kratos --mount type=bind,src=<absolute-path-to-project>/kratos-test,target=<absolute-path-to-project>/kratos-test localhost/oryd/kratos:
 v0.11.1 serve --config <absolute-path-to-project>/kratos-test/kratos.yaml
 ```
